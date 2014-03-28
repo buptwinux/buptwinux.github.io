@@ -56,25 +56,6 @@
 	  <div class="content">
 
 <div class='article'>
-	<h2>Jquery的html()、text()以及原生JS的innerHTML的坑</h2>
-	<div class="well small">Permalink: <a class="more" href="./pages/2014/03/27/踩过的坑.html">2014-03-27 00:00:00</a>
-by <a class="url fn" href="./author/winux.html">winux </a>
- in <a href="./category/za-tan.html">杂谈</a>
-tags: <a href="./tag/javascript-jquery.html">javascript jquery</a> </div>
-	<div class="summary"><p>记录一个坑：## JQuery的html()和text()以及原生JS中innerHTML属性的区别 ##</p>
-<p>今天同事让我帮忙解决个问题，说input框里输入`<script>alert(1)</script>`</>后，直接在页面弹出1.跟踪了一下代码执行，发现原来是用了JQuery的`$(selector).html()`方法，因为一直用原生js，所以认为该方法和原生的innerHTML没有什么不同。查了一下JQuery官方文档才发现
-原来html方法有以下特性：
-
-1.  html(str),会将str原样插入节点，不会过滤任何标签。例如如下代码
-    html:`<div id="example"></div>`
-    JS:`:$("#example").html("<span>hello word</span>")`;
-    执行结果：`<div id="example"><span>hello word</span></div>`
-JQuery官方API对html()方法的说明：
-
-> By design, any jQuery constructor or method that accepts an HTML string — jQuery(), .append ...<//></p> <a class="btn primary xsmall" href="./pages/2014/03/27/踩过的坑.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
 	<h2>我的第一篇博客</h2>
 	<div class="well small">Permalink: <a class="more" href="./pages/2013/12/12/firstblog.html">2013-12-12 00:00:00</a>
 by <a class="url fn" href="./author/winux.html">winux </a>
