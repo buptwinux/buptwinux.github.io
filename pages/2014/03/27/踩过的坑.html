@@ -83,15 +83,15 @@ JQuery官方API对html()方法的说明：
 
 
 2. text(str),会将str中的html标签进行转换后插入（如果包含html标签的话）。下面代码说明这个问题：
-    html:`<div id="example"></div>`
-    JS:`:$("#example").text("<span>hello word</span>")`;
-    执行结果：`<div id="example">&lt;span&gt;hello word&lt;/span&gt;</div>`
+    html:<code><div id="example"></div></code>
+    JS:<code>:$("#example").text("<span>hello word</span>")</code>;
+    执行结果：<code><div id="example">&lt;span&gt;hello word&lt;/span&gt;</div></code>
 下面是JQuery官方的说明：
 > Unlike the .html() method, .text() can be used in both XML and HTML documents.
 > 
 > We need to be aware that this method escapes the string provided as necessary so that it will render correctly in HTML. To do so, it calls the DOM method .createTextNode(), does not interpret the string as HTML. 
 
-3. innerHTML，与上面二者不同，这是dom对象的一个属性。如果要将一段html片段插入到一个标签中，则innerHTML无疑是上佳的选择。在大部分的情况下`$("#example").html(htmlstr or str)`和`document.getElementById("example").innerHTML = htmlstr or str;`表现完全一样。但是回到开头提到的那个问题，如果使用html()方法，则若用户这输入框中输入类似`<script>alert(0)</script>`的内容时，就会弹出0.这也留下了xss（跨站脚本攻击）的隐患。而是用innerHTML则完全不用担心这个问题。</div>
+3. innerHTML，与上面二者不同，这是dom对象的一个属性。如果要将一段html片段插入到一个标签中，则innerHTML无疑是上佳的选择。在大部分的情况下<code>$("#example").html(htmlstr or str)</code>和<code>document.getElementById("example").innerHTML = htmlstr or str;</code>表现完全一样。但是回到开头提到的那个问题，如果使用html()方法，则若用户这输入框中输入类似<code><script>alert(0)</script></code>的内容时，就会弹出0.这也留下了xss（跨站脚本攻击）的隐患。而是用innerHTML则完全不用担心这个问题。</div>
 		<div>
 			<h2>Comments</h2>
 <div id="disqus_thread"></div>		<div>
